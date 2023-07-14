@@ -2,7 +2,7 @@ function SignupValidation (values) {
 
     let errors = {};
     const email_pattern = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
-    const password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/
+    // const password_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/
     const phone_pattern = /^[0-9]{10}$/
 
     if (!values.phone) {
@@ -35,9 +35,10 @@ function SignupValidation (values) {
     if (!values.password) {
       errors.password = "Password is required";
     }
-    else if (!password_pattern.test(values.password)) {
-      errors.password = "Password is invalid";
-    }else{
+    // else if (!password_pattern.test(values.password)) {
+    //   errors.password = "Password is invalid";
+    // }
+    else{
       errors.password = ""
     }
   
